@@ -18,7 +18,7 @@ function App() {
     });
     setInterval(()=>{
       detect(net)
-    },100)
+    },50)
   }
 
   const detect=async(net)=>{
@@ -37,7 +37,7 @@ function App() {
         canvasRef.current.height=videoHeight;
 
         const face=await net.estimateFaces(video);
-        console.log(face);
+      
 
         const ctx = canvasRef.current.getContext("2d");
         drawMesh(face, ctx);
