@@ -1,0 +1,40 @@
+.App {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+/* Webcam & Canvas Styling */
+.webcam, .canvas {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  aspect-ratio: 4 / 3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .webcam, .canvas {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .webcam, .canvas {
+    max-width: 100%;
+  }
+}
+
+@media (max-width:320px){
+  .webcam,.canvas{
+    max-width:100%;
+  }
+}
